@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+#louis, #falisse{
+    width: 35%;
+    height: auto;
+    margin-left: 33%;
+    margin-top: 0%;
+    justify-content: center;
+    position: absolute;
+}
+#falisse{
+	margin-top: 6.1%;
+    margin-left: 34%;
+}
+#col{
+	width:100%;
+	height:auto;
+}
+#photo{
+	width:100%;
+	height:auto;
+}
+@media (hover) and (min-width:807px) {
+#col{
+	width: 33%;
+	height:auto;
+}
+#photo{
+	width: 33%;
+	padding-top: 1%;
+	height:auto;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+    padding-top: 29%
+    }
+
+.flex-item:nth-child(1) {
+    order: 1;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(2) {
+    order: 2;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(3) {
+    order: 3;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(4) {
+    order: 4;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(5) {
+    order: 5;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+.flex-item:nth-child(6) {
+    order: 6;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+</style>
+</head>
+<body>
+    <img id='louis' src=photos/louis.png>
+	<img id='falisse' src=photos/falisse.png>
+	<div class='flex-container'>
+		<img class='flex-item' id='col' src=photos/1.jpg>
+		<img class='flex-item' id='col' src=photos/2.jpg>
+		<img class='flex-item' id='col' src=photos/3.jpg>
+		<img class='flex-item' id='photo' src=photos/6.jpg>
+		<img class='flex-item' id='photo' src=photos/7.jpg>
+		<img class='flex-item' id='photo' src=photos/8.jpg>
+	</div>
+<script>
+
+$("#louis").mouseover(function(){
+            var src = $(this).attr("src").match(/[^\.]+/) + "1.png";
+            $(this).attr("src", src);
+        })
+    $("#louis").mouseout(function() {
+            var src = $(this).attr("src").replace("1.png", ".png");
+            $(this).attr("src", src);
+        });
+$("#falisse")
+    .mouseover(function() {
+        var src = $(this).attr("src").match(/[^\.]+/) + "1.png";
+        $(this).attr("src", src);
+    })
+    .mouseout(function() {
+        var src = $(this).attr("src").replace("1.png", ".png");
+        $(this).attr("src", src);
+    });
+</script>
+</body>
+</html>
