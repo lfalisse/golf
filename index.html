@@ -37,6 +37,10 @@ body{
 	padding-top: 1%;
 	height:auto;
 }
+#photo1{
+	width:33.2%;
+	padding-top: 1%;
+}
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -46,6 +50,13 @@ body{
     align-items: flex-start;
     padding-top: 29%
     }
+img{
+	opacity: 0.8;
+	transition: 500ms;
+}
+img:hover{
+	opacity: 1;
+}
 
 .flex-item:nth-child(1) {
     order: 1;
@@ -93,7 +104,7 @@ body{
 		<img class='flex-item' id='col' src=photos/2.jpg>
 		<img class='flex-item' id='col' src=photos/3.jpg>
 		<img class='flex-item' id='photo' src=photos/6.jpg>
-		<img class='flex-item' id='photo' src=photos/7.jpg>
+		<img class='flex-item' id='photo1' src=photos/7.jpg>
 		<img class='flex-item' id='photo' src=photos/8.jpg>
 	</div>
 <script>
